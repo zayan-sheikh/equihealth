@@ -1,12 +1,27 @@
-const Workout = require('./models/model1')
+const User = require('./models/model1')
 const mongoose = require('mongoose')
 
 // get all workouts
-const getWorkouts = async (req, res) => {
-    const workouts = await Workout.find({}).sort({createdAt: -1})
+const getStatistics = async (req, res) => {
+    const workouts = await User.find({}).sort({createdAt: -1})
 
     res.status(200).json(workouts)
 }
+
+// get the streak
+const getStreak = async (req, res) => {
+    //
+}
+
+// update the streak
+const updateStreak = async (req, res) => {
+    //
+}
+
+const updateTaskCompletionCount = async (req, res) => {
+    //
+}
+
 
 // get one workout
 const getWorkout = async (req, res) => {
@@ -111,9 +126,12 @@ const updateWorkout = async (req, res) => {
 // the order in which the functions are listed below does NOT matter, since we will be matching 
 // them by name when we import them anyways.
 module.exports = {
-    createWorkout,
-    getWorkout,
-    getWorkouts,
-    deleteWorkout,
-    updateWorkout
+    // createWorkout,
+    getStreak,
+    // getWorkout,
+    getStatistics,
+    updateTaskCompletionCount,
+    updateStreak,
+    // deleteWorkout,
+    // updateWorkout
 }

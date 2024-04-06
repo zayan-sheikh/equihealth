@@ -3,32 +3,31 @@ const express = require("express")
 // answer: NO, the order does not matter. Thus we know that the program depends on the names, so the
 // NAMES DO matter - the names likely matter for all arrays/sets.
 const {
-    createWorkout, 
-    getWorkouts,
-    getWorkout,
-    deleteWorkout,
-    updateWorkout
+    // createWorkout,
+    getStreak, 
+    getStatistics,
+    updateStreak,
+    updateTaskCompletionCount,
+    // getWorkout,
+    // deleteWorkout,
+    // updateWorkout
 } = require('../workoutController')
 
 const router = express.Router()
 
 
 
-// GET all workouts
-router.get('/', getWorkouts)
+// GET all statistics
+router.get('/stats', getStatistics)
 
-// GET a single workout
+// GET all statistics
+router.get('/', getStreak)
+
+// UPDATE the streak
+router.patch('/', updateStreak)
+
+// UPDATE the completion count of a task
 // note: turning "id" into a route parameter using a colon attaches it to the "params" property of "req".
-router.get('/:id', getWorkout)
-
-// POST a new workout
-router.post('/', createWorkout)
-
-// DELETE a workout
-router.delete('/:id', deleteWorkout)
-
-// UPDATE a workout
-router.patch('/:id', updateWorkout)
-
+router.patch('/:id', updateTaskCompletionCount)
 
 module.exports = router
