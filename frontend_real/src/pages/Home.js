@@ -6,7 +6,7 @@ import differenceInHours from 'date-fns/differenceInHours'
 import Spline from '@splinetool/react-spline';
 
 function Home() {
-    const [streak, setStreak] = useState()
+    const [streak, setStreak] = useState();
     var user = {};
 
     useEffect(() => {
