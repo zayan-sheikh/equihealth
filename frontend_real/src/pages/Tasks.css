@@ -40,6 +40,10 @@ body {
     background-color: grey;
 }
 
+.task:hover > p {
+    color: white;
+}
+
 .taskB {
     border: none;
     fill: none;

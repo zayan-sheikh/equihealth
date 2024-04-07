@@ -73,6 +73,7 @@ function Tasks() {
   }
 
   const taskPressed = async (taskNo) => {
+    alert("Task Completed!");
     var cat = "";
     console.log(taskArray[taskNo]);
     cat = category(taskArray[taskNo]);
