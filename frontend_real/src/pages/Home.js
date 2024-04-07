@@ -47,7 +47,7 @@ function Home() {
 
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '20%'}}>
                 <div  style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                    <img src={streakimg} alt='Streak' style={{ width: '22vw', height: 'auto' }}></img> 
+                    <img src={streakimg} alt='Streak' style={{ width: '22vw', height: 'auto'}}></img> 
                     <h4 class = 'streak' style={{fontSize: '15vw', marginRight: '20px', color: '#d2091c'}}>{streak} </h4>
                 </div>
 
