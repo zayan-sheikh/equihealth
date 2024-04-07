@@ -41,35 +41,29 @@ function Stats() {
     // returns the category with the most tasks completed in
     const largest = () => {
         var largestVal = 0;
-        var v = 0;
+        var smallest = 10000;
+        var l = 0;
+        var s = 0;
 
         for (let i = 0; i < 5; i++) {
             if (largestVal < catValArray[i]) {
                 largestVal = catValArray[i];
-                v = i;   
+                l = i;   
             }
-        }
 
-        return catNameArray[v];
-    }
-
-    largestCat = largest();
-
-    const smallest = () => {
-        var smallest = largestCat;
-        var v = 0;
-
-        for (let i = 0; i < 5; i++) {
             if (smallest > catValArray[i]) {
                 smallest = catValArray[i];
-                v = i;
+                s = i;
             }
         }
 
-        return catNameArray[v];
+        largestCat = catNameArray[l];
+        smallestCat = catNameArray[s];
     }
 
-    smallestCat = smallest();
+    largest();
+
+    
 
 
     return (
@@ -82,7 +76,7 @@ function Stats() {
 
 
         <div class="Label">
-            <h1>YOUR STATS</h1>
+            <h1>Your Statistics</h1>
         </div>
 
         <div class="Graph">
@@ -114,17 +108,14 @@ function Stats() {
 
         <div class="Priority">
             <div class="prContain">
-                <p>Lately, your priority has been&nbsp; </p>
-                <p class="prText">{largestCat}</p>
-                <p class="prText">.</p>
+                <p>Lately, your priority has been {largestCat}.</p>
             </div>            
         </div>
 
         <div class="Balance">
         <div class="prContain">
-                <p>Create balance with more&nbsp; </p>
-                <p class="prText">{smallestCat}</p>
-                <p class="prText">.</p>
+                <p>Create balance with more {smallestCat}.</p>
+                {/* <p class="prText">{smallestCat}.</p> */}
             </div>   
         </div>
 

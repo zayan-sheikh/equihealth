@@ -52,8 +52,7 @@ p {
     justify-content: center;
     max-width: 90%;
     margin: 5vw;
-    margin-top: 2vw;
-    animation: slidein 4s ease-in 0s;
+    animation: slidein 1s ease-in 0s;
 }
 
 @keyframes slidein {

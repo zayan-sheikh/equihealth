@@ -122,6 +122,7 @@ function Tasks() {
     const response = await fetch(result, requestOptions)
     
   }
+
   
   return (
     <div className="tasks-background">
@@ -131,7 +132,7 @@ function Tasks() {
 
       <div className="task-list">
         <Link to='/' title="task1" class="taskB" onClick={() => taskPressed(task1)}>
-          <div className="task" style={{background: }}>
+          <div className="task" style={{backgroundColor: "white"}}>
             <p>{taskArray[task1]}</p> 
           </div>
         </Link>
