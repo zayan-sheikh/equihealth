@@ -4,9 +4,9 @@ import differenceInHours from 'date-fns/differenceInHours'
 
 function Tasks() {
   // WARNING: if you change any of these, make sure to carry out the change in "category" function as well.
-  const taskArray = ["drink water", "take a walk", "go on a run",
-                    "read a book", "journal", "reach out to an old friend",
-                    "message a loved one", "cook a healthy meal", "spend 10 min outdoors"];
+  const taskArray = ["Drink water", "Take a walk", "Go on a run",
+                    "Read a book", "Journal", "Reach out to an old friend",
+                    "Message a loved one", "Cook a healthy meal", "Spend 10 min outdoors"];
   
   var task1 = Math.floor(Math.random() * taskArray.length);
   var task2 = Math.floor(Math.random() * taskArray.length);
@@ -22,23 +22,23 @@ function Tasks() {
 
   const category = (task) => {
     switch(task) {
-      case "drink water":
+      case "Drink water":
         return "water";
-      case "take a walk":
+      case "Take a walk":
         return "exercise";
-      case "go on a run":
+      case "Go on a run":
         return "exercise";
-      case "read a book":
+      case "Read a book":
         return "brain";
-      case "journal":
+      case "Journal":
         return "brain";
-      case "reach out to an old friend":
+      case "Reach out to an old friend":
         return "connect";
-      case "message a loved one":
+      case "Message a loved one":
         return "connect";
-      case "cook a healthy meal":
+      case "Cook a healthy meal":
         return "food";
-      case "spend 10 min outdoors":
+      case "Spend 10 min outdoors":
         return "exercise";
     }
   }
@@ -130,15 +130,15 @@ function Tasks() {
 
       <div className="task-list">
         <div className="task">
-          <button title="task1" onClick={() => taskPressed(task1)}>{taskArray[task1]}</button>
+          <button title="task1" class="taskB" onClick={() => taskPressed(task1)}>{taskArray[task1]}</button>
         </div>
 
         <div className="task">
-          <button title="task1" onClick={() => taskPressed(task2)}>{taskArray[task2]}</button>
+          <button title="task1" class="taskB" onClick={() => taskPressed(task2)}>{taskArray[task2]}</button>
         </div>
 
         <div className="task">
-          <button title="task1" onClick={() => taskPressed(task3)}>{taskArray[task3]}</button>
+          <button title="task1" class="taskB" onClick={() => taskPressed(task3)}>{taskArray[task3]}</button>
         </div>
       </div>
     </div>
