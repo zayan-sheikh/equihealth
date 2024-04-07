@@ -17,7 +17,7 @@ const createUser = async (req, res) => {
 const getStatistics = async (req, res) => {
     const workouts = await User.find({}) 
 
-    res.status(200).json(workouts)
+    res.status(200).json(...workouts)
 }
 
 const updateUser = async (req, res) => {

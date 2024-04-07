@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./Stats.css";
 import {Link} from 'react-router-dom';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer} from 'recharts';
@@ -13,6 +13,25 @@ const dummybars = [
 
 
 function Stats() {
+    const [user, setUser] = useState({streak: -1, water: -1, exercise: -1, food: -1, brain: -1, connect: -1})
+
+    useEffect(() => {
+        const fetchStreak = async () => {
+            const requestOptions = {
+                method: "GET",
+                redirect: "follow"
+            };
+            const response = await fetch("http://localhost:3001/api/main", requestOptions)
+            const json = await response.json()
+
+            if (response.ok) {
+                setUser(json)
+            }
+        }
+
+        fetchStreak()
+    }, [])
+
     return (
         <div class="container">
 
@@ -24,6 +43,13 @@ function Stats() {
 
         <div class="Label">
             <h1>YOUR STATS</h1>
+        </div>
+        <div class="Label">
+            <p>{user.water}</p>
+            <p>{user.exercise}</p>
+            <p>{user.food}</p>
+            <p>{user.brain}</p>
+            <p>{user.connect}</p>
         </div>
 
         <div class="Graph">
