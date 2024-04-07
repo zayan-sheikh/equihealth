@@ -27,4 +27,5 @@
 .navbar > p {
     font-size: 40px;
     opacity: 1;
+    font-weight: 10;
 }
