@@ -1,16 +1,37 @@
 .container {
     flex: 1;
-    background-color: '#fff';
-    align-items: 'center';
-    justify-content: 'center';
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20vh;
 }
 
 .header {
     background-color: #4ECDC4;
-    padding: 20;
+    padding: 20px;
+    border-radius: 40px;
+    margin: 5vh;
+    transition: 0.3s
+    
+}
+
+.header:hover {
+    background-color: #131313;
+    margin: 10vh
 }
 
 .userText {
     font-size: 20;
-    text-align: 'left';
+    text-align: center;
+    color: white;
+
+}
+
+.test {
+    background-color: #000;
+}
+
+body {
+    
 }
