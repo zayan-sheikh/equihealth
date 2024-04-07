@@ -1,3 +1,8 @@
 .App {
   text-align: center;
 }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom, #9DF0DC, #5BBBB5);
+}
