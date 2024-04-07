@@ -122,7 +122,7 @@ function Stats() {
         <div class="Plug">
             
             <div class="plugHeader">
-                Arc'teryx has great products to enhance your fitness!
+                Arc'teryx has great products to enhance your {largestCat}!
             </div>
 
             <div class="plugBody">
