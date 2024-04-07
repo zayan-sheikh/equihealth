@@ -7,6 +7,7 @@ const {
     createUser,
     getStatistics,
     updateUser,
+    deleteUser,
     // getWorkout,
     // deleteWorkout,
     // updateWorkout
@@ -16,6 +17,9 @@ const router = express.Router()
 
 // POST a user
 router.post('/', createUser);
+
+// DELETE the user
+router.get('/:id', deleteUser);
 
 // GET all statistics
 router.get('/stats', getStatistics)

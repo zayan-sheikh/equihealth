@@ -1,7 +1,12 @@
 const User = require('./models/model1')
 const mongoose = require('mongoose')
 
-// create a new workout
+// delete a user
+const deleteUser = async (req, res) => {
+    //
+}
+
+// create a new user
 const createUser = async (req, res) => {
     // add a User document to db
     try {
@@ -145,7 +150,8 @@ module.exports = {
     createUser,
     // getWorkout,
     getStatistics,
-    updateUser
+    updateUser,
+    deleteUser
     // deleteWorkout,
     // updateWorkout
 }

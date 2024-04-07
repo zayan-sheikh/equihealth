@@ -28,6 +28,7 @@ function Home() {
         fetchStreak()
 
         var time = differenceInHours(new Date(), new Date(user.updatedAt));
+        
 
         if (time > 48) {
             const myHeaders = new Headers();
