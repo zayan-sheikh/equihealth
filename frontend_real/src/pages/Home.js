@@ -2,6 +2,7 @@ import React from 'react';
 import "./Home.css";
 import {Link} from 'react-router-dom'
 import streak from '../assets/streak.png'
+import NavBar from '../assets/NavBar';
 
 function Home() {
     return (
