@@ -1,16 +1,30 @@
 const User = require('./models/model1')
 const mongoose = require('mongoose')
 
-// get all workouts
+// create a new workout
+const createUser = async (req, res) => {
+    // add a User document to db
+    try {
+        const user = await Workout.create({streak: 0, water: 0, exercise: 0, food: 0, brain: 0, connect: 0})
+        res.status(200).json(user)
+    } catch (error) {
+        // "error" is a property of the response JSON
+        res.status(400).json({error: error.message})
+    } 
+}
+
+// get statistics
 const getStatistics = async (req, res) => {
-    const workouts = await User.find({}).sort({createdAt: -1})
+    const workouts = await User.find({}) 
 
     res.status(200).json(workouts)
 }
 
 // get the streak
 const getStreak = async (req, res) => {
-    //
+    const streak = await User.find({}) 
+
+    res.status(200).json(streak)
 }
 
 // update the streak
@@ -111,7 +125,7 @@ const updateWorkout = async (req, res) => {
     // note: "workout" below will be equal to the PRE-UPDATE document, NOT the new, updated document.
     const workout = await Workout.findOneAndUpdate({_id: id}, {
         // the ... in front of req.body spreads out the elements in req.body into the outer curly brackets.
-        ...req.body 
+        ...req.body
     })
 
     if (!workout) {
@@ -127,6 +141,7 @@ const updateWorkout = async (req, res) => {
 // them by name when we import them anyways.
 module.exports = {
     // createWorkout,
+    createUser,
     getStreak,
     // getWorkout,
     getStatistics,

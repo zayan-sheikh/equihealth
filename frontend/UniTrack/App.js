@@ -1,31 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { NativeRouter, Switch, Route } from 'react-router-native';
+
+import Home from "./pages/Home";
+import Stats from 
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.userText}> Hello, User!</Text>
+    <NativeRouter>
+      <View>
+        <Switch>
+          <Route exact path="" component={Home} />
+        </Switch>
       </View>
-      <StatusBar style="auto" />
-    </View>
+    </NativeRouter>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  header: {
-    backgroundColor: '#4ECDC4',
-    padding: 20,
-  },
-  userText: {
-    textSize: 20,
-    textAlign: 'left',
-  },
+  //
 });

@@ -4,6 +4,7 @@ const express = require("express")
 // NAMES DO matter - the names likely matter for all arrays/sets.
 const {
     // createWorkout,
+    createUser,
     getStreak, 
     getStatistics,
     updateStreak,
@@ -15,7 +16,8 @@ const {
 
 const router = express.Router()
 
-
+// POST a user
+router.post('/', createUser);
 
 // GET all statistics
 router.get('/stats', getStatistics)
@@ -24,7 +26,7 @@ router.get('/stats', getStatistics)
 router.get('/', getStreak)
 
 // UPDATE the streak
-router.patch('/', updateStreak)
+router.patch('/:id', updateStreak)
 
 // UPDATE the completion count of a task
 // note: turning "id" into a route parameter using a colon attaches it to the "params" property of "req".
