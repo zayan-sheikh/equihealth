@@ -1,3 +1,33 @@
 body {
-    background: linear-gradient(#e66465, #9198e5);
+    background: linear-gradient(#95FFEC, #37A58A);
+}
+
+.Back {
+    text-align: left;
+    color: rgb(0, 0, 0);
+}
+
+.Label {
+    color: rgb(11, 95, 99);
+}
+
+.Graph {
+    box-sizing: border-box;
+
+}
+
+p {
+    font-size: 14pt;
+}
+
+.prText {
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.prContain {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
 }

@@ -32,8 +32,9 @@ function Home() {
                 <Link to='/tasks' class="userText">View Daily Task</Link>
             </div>
             <div class="header">
-                <Link to='/leaderboard' class="userText">Leaderboard</Link>
+                <Link to='./Stats' class="userText">Leaderboard</Link>
             </div>
+
             <div class="header">
                 <Link to='/addfriends' class="userText">Add Friends</Link>
             </div>
