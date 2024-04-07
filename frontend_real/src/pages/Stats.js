@@ -93,7 +93,7 @@ function Stats() {
 
         <div class="Balance">
         <div class="prContain">
-                <p>Create balance with&nbsp; </p>
+                <p>Create balance with more&nbsp; </p>
                 <p class="prText">nutrition</p>
                 <p class="prText">.</p>
             </div>   
