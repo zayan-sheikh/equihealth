@@ -1,23 +1,31 @@
 import React from 'react';
 import "./Home.css";
-import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom'
+import streak from '../assets/streak.png'
 
 function Home() {
     return (
-        <div class="test">
         
         <div class="container">
-            <div class="header">
-                <p class="userText"> Hello, User!</p>
+            <div>
+                <p class="greeting"> Hello, User!</p>
             </div>
-
+        
             <div class="header">
                 <Link to='/tasks' class="userText">View Daily Task</Link>
             </div>
-        </div>
+            <div class="header">
+                <Link to='/leaderboard' class="userText">Leaderboard</Link>
+            </div>
+            <div class="header">
+                <Link to='/addfriends' class="userText">Add Friends</Link>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <img src={streak} alt='Streak' style={{ width: '4vw', height: 'auto' }}></img> <h4 class = 'streak' style={{marginRight: '20px', color: '#d2091c'}}>5d </h4><p class ='streak'>You're on fire!</p>
+            </div>
+            </div>
+    
 
-
-        </div>
     )
 };
 
