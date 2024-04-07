@@ -12,17 +12,19 @@ body {
 }
 
 .Graph {
-    box-sizing: border-box;
+    justify-content: center;
 
 }
 
 p {
     font-size: 14pt;
+    color: #0a4752
 }
 
 .prText {
     font-weight: bold;
     font-size: 14pt;
+    color:#0a4752
 }
 
 .prContain {
@@ -30,4 +32,12 @@ p {
     flex-direction: row;
     text-align: center;
     justify-content: center;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 7%;
+    margin-top: 5%;
 }
