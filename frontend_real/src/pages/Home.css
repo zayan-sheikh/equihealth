@@ -1,10 +1,16 @@
 .container {
     flex: 1;
-    background-color: #fff;
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-top: 20vh;
+    margin-top: 0;
+    height: 100vh;
+}
+
+.greeting {
+    color:#1A535C;
+    text-align: center;
+    font-size: 50px;
 }
 
 .header {
@@ -18,20 +24,17 @@
 
 .header:hover {
     background-color: #131313;
-    margin: 10vh
+    padding: 2%;
 }
 
 .userText {
     font-size: 20;
     text-align: center;
-    color: white;
+    color: rgb(255, 255, 255);
 
 }
 
-.test {
-    background-color: #000;
-}
 
-body {
-    
+.streak {
+    font-size: 20px;
 }

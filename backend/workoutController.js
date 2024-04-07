@@ -5,7 +5,7 @@ const mongoose = require('mongoose')
 const createUser = async (req, res) => {
     // add a User document to db
     try {
-        const user = await Workout.create({streak: 0, water: 0, exercise: 0, food: 0, brain: 0, connect: 0})
+        const user = await User.create({streak: 0, water: 0, exercise: 0, food: 0, brain: 0, connect: 0})
         res.status(200).json(user)
     } catch (error) {
         // "error" is a property of the response JSON
@@ -17,23 +17,24 @@ const createUser = async (req, res) => {
 const getStatistics = async (req, res) => {
     const workouts = await User.find({}) 
 
-    res.status(200).json(workouts)
+    res.status(200).json(...workouts)
 }
 
-// get the streak
-const getStreak = async (req, res) => {
-    const streak = await User.find({}) 
+const updateUser = async (req, res) => {
+    const { id } = req.params
 
-    res.status(200).json(streak)
-}
+    // findOneAndUpdate() takes in two arguments: the "find" criteria and the object representing the 
+    // update we want to make
+    // question: can you just put req.body as the second argument?
+    // note: "workout" below will be equal to the PRE-UPDATE document, NOT the new, updated document.
+    const workout = await Workout.findOneAndUpdate({_id: id}, {
+        // the ... in front of req.body spreads out the elements in req.body into the outer curly brackets.
+        ...req.body
+    })
+    
+    const workout1 = await Workout.findById(id)
 
-// update the streak
-const updateStreak = async (req, res) => {
-    //
-}
-
-const updateTaskCompletionCount = async (req, res) => {
-    //
+    res.status(200).json(workout1)
 }
 
 
@@ -142,11 +143,9 @@ const updateWorkout = async (req, res) => {
 module.exports = {
     // createWorkout,
     createUser,
-    getStreak,
     // getWorkout,
     getStatistics,
-    updateTaskCompletionCount,
-    updateStreak,
+    updateUser
     // deleteWorkout,
     // updateWorkout
 }

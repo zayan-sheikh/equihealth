@@ -4,7 +4,7 @@ const port = process.env.PORT || 5000;
 const express = require('express')
 const favicon = require('express-favicon');
 const mongoose = require('mongoose')
-const workoutRoutes = require('./routes/route1')
+const userRoutes = require('./routes/route1')
 
 // // Tells the server to look for a build of the React app (for Heroku deployment)
 // if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging') {
@@ -30,7 +30,7 @@ app.use((req, res, next) => {
 })
 
 // routes
-app.use('/api/workouts', workoutRoutes)
+app.use('/api/main', userRoutes)
 
 // connect to db
 mongoose.connect(process.env.MONGO_URI)

@@ -5,10 +5,8 @@ const express = require("express")
 const {
     // createWorkout,
     createUser,
-    getStreak, 
     getStatistics,
-    updateStreak,
-    updateTaskCompletionCount,
+    updateUser,
     // getWorkout,
     // deleteWorkout,
     // updateWorkout
@@ -22,14 +20,14 @@ router.post('/', createUser);
 // GET all statistics
 router.get('/stats', getStatistics)
 
-// GET all statistics
-router.get('/', getStreak)
+// GET the streak
+router.get('/', getStatistics)
 
 // UPDATE the streak
-router.patch('/:id', updateStreak)
+router.patch('/:id', updateUser)
 
 // UPDATE the completion count of a task
 // note: turning "id" into a route parameter using a colon attaches it to the "params" property of "req".
-router.patch('/:id', updateTaskCompletionCount)
+router.patch('/:id', updateUser)
 
 module.exports = router
