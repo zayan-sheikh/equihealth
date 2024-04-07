@@ -34,3 +34,9 @@ body {
 .task > p {
     color: rgb(11, 95, 99);
 }
+
+.taskB {
+    border: none;
+    fill: none;
+    background-color: rgba(0,0,0,0)
+}
