@@ -13,6 +13,10 @@
     font-size: 50px;
 }
 
+.userText {
+    text-decoration: none;
+}
+
 .header {
     background-color: #15535e;
     padding-top: 2px;
