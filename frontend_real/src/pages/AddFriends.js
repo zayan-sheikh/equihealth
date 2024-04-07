@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function AddFriends() {
   return (
-    <div>
+    <div class='container'>
       <p>Friends</p>
     </div>
   )

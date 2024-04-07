@@ -1,8 +1,17 @@
 .navbar {
     display: flex;
+    background-color: white;
     flex-direction: row;
+    justify-content: space-between;
+    padding: 2vh;
 }
 
 .icon > img {
-    width: 100px;
+    width: 10vw; /* Set a fixed width */
+    height: 'auto'; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image covers the entire space while maintaining aspect ratio */
+    justify-content: space-between;
+    padding: 4vh;
+    margin: 2vw;
+  
 }
