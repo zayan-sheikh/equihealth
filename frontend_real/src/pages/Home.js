@@ -41,6 +41,9 @@ function Home() {
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <img src={streak} alt='Streak' style={{ width: '4vw', height: 'auto' }}></img> <h4 class = 'streak' style={{marginRight: '20px', color: '#d2091c'}}>5d </h4><p class ='streak'>You're on fire!</p>
             </div>
+            <div class='nav'>
+                <NavBar />
+                </div>
             </div>
     
 
