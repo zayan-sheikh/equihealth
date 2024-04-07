@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import "./Home.css";
 import {Link} from 'react-router-dom'
 import streak from '../assets/streak.png'
 import NavBar from '../assets/NavBar';
 
 function Home() {
+    const [streak, setStreak] = useState(-1)
+
+    useEffect(() => {
+        const fetchStreak = async () => {
+            const response = await fetch('/api/main')
+            const json = await response.json()
+            console.log(json)
+
+            if (response.ok) {
+                setStreak(json.streak)
+            }
+        }
+
+        fetchStreak()
+    }, [])
+
     return (
         
         <div class="container">
