@@ -83,10 +83,11 @@ function Home() {
                 </div>
             </div>
 
-
-            <div class="header">
-                <Link to='/tasks' class="userText">View Daily Tasks</Link>
-            </div>
+            <Link to='/tasks' class="userText">
+                <div class="header">
+                    <p>View Daily Tasks</p>
+                </div>
+            </Link>
         </div>
     
 

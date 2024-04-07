@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Tasks.css"
 import differenceInHours from 'date-fns/differenceInHours'
+import { Link } from 'react-router-dom';
 
 function Tasks() {
   // WARNING: if you change any of these, make sure to carry out the change in "category" function as well.
@@ -129,17 +130,23 @@ function Tasks() {
       </div>
 
       <div className="task-list">
-        <div className="task">
-          <button title="task1" class="taskB" onClick={() => taskPressed(task1)}>{taskArray[task1]}</button>
-        </div>
+        <Link to='/' title="task1" class="taskB" onClick={() => taskPressed(task1)}>
+          <div className="task" style={{background: }}>
+            <p>{taskArray[task1]}</p> 
+          </div>
+        </Link>
 
-        <div className="task">
-          <button title="task1" class="taskB" onClick={() => taskPressed(task2)}>{taskArray[task2]}</button>
-        </div>
+        <Link to='/' title="task1" class="taskB" onClick={() => taskPressed(task2)}>
+          <div className="task">
+            <p>{taskArray[task2]}</p> 
+          </div>
+        </Link>
 
-        <div className="task">
-          <button title="task1" class="taskB" onClick={() => taskPressed(task3)}>{taskArray[task3]}</button>
-        </div>
+        <Link to='/' title="task1" class="taskB" onClick={() => taskPressed(task3)}>
+          <div className="task">
+            <p>{taskArray[task3]}</p> 
+          </div>
+        </Link>
       </div>
     </div>
   )
