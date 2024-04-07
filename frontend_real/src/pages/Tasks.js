@@ -2,6 +2,7 @@ import React from 'react'
 import "./Tasks.css"
 import differenceInHours from 'date-fns/differenceInHours'
 import { Link } from 'react-router-dom';
+import Spline from '@splinetool/react-spline';
 
 function Tasks() {
   // WARNING: if you change any of these, make sure to carry out the change in "category" function as well.
@@ -116,7 +117,7 @@ function Tasks() {
       redirect: "follow"
     };
 
-
+    
     var path = "http://localhost:3001/api/main/";
     var result = path.concat(user._id);
     const response = await fetch(result, requestOptions)
@@ -129,6 +130,8 @@ function Tasks() {
       <div class="Label">
         <h1>Choose Today's Task:</h1>
       </div>
+
+      <Spline class="Unicor" scene="https://prod.spline.design/p4WjuLMFFEbMOag6/scene.splinecode" />
 
       <div className="task-list">
         <Link to='/' title="task1" class="taskB" onClick={() => taskPressed(task1)}>

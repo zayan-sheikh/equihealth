@@ -46,3 +46,10 @@ body {
     background-color: rgba(0,0,0,0);
     text-decoration: none;
 }
+
+.Unicor {
+    z-index: -10;
+    position: absolute;
+    margin: 10% auto;
+    max-height: 475px;
+}
