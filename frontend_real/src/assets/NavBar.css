@@ -1,17 +1,29 @@
 .navbar {
     display: flex;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
     flex-direction: row;
     justify-content: space-between;
     padding: 2vh;
+    position: absolute;
+    left: 0px;
+    inset: 14px;
+    height: 60px;
+    border-radius: 30px;
+    align-self: end;
+    align-items: center;
 }
 
 .icon > img {
-    width: 10vw; /* Set a fixed width */
+    width: 6vw; /* Set a fixed width */
     height: 'auto'; /* Set a fixed height */
     object-fit: cover; /* Ensures the image covers the entire space while maintaining aspect ratio */
     justify-content: space-between;
-    padding: 4vh;
-    margin: 2vw;
-  
+    padding: 1vh;
+    margin: 1vh;
+    align-self: center;
+}
+
+.navbar > p {
+    font-size: 40px;
+    opacity: 1;
 }

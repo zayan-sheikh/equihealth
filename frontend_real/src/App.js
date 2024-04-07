@@ -5,6 +5,7 @@ import Tasks from './pages/Tasks'
 import Leaderboard from './pages/Leaderboard'
 import AddFriends from './pages/AddFriends'
 import Stats from './pages/Stats'
+import NavBar from './assets/NavBar';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
           <Route path='/addfriends' exact element={<AddFriends />}></Route>
           <Route path='/stats' exact element={<Stats />}></Route>
         </Routes>
+
+        <NavBar />
 
       </Router>
     </>
