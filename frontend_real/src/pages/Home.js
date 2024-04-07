@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import "./Home.css";
 import {Link} from 'react-router-dom'
 import streakimg from '../assets/streakimg.png'
-import NavBar from '../assets/NavBar';
 
 function Home() {
     const [streak, setStreak] = useState(-1)
@@ -14,12 +13,8 @@ function Home() {
                 method: "GET",
                 redirect: "follow"
             };
-            console.log("before");
             const response = await fetch("http://localhost:3001/api/main", requestOptions)
-            console.log("after");
-            console.log(response)
             const json = await response.json()
-            console.log(json)
 
             if (response.ok) {
                 setStreak(json.streak)
@@ -37,15 +32,17 @@ function Home() {
             </div>
         
             <div class="header">
-                <Link to='/tasks' class="userText">View Daily Task</Link>
+                <Link to='/tasks' class="userText">View Daily Tasks</Link>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <img src={streakimg} alt='Streak' style={{ width: '8vw', height: 'auto' }}></img> <h4 class = 'streak' style={{marginRight: '20px', color: '#d2091c'}}>{streak}d </h4><p class ='streak'>You're on fire!</p>
-            </div>
-            <div>
-                <NavBar />
+
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+                <div  style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <img src={streakimg} alt='Streak' style={{ width: '30vw', height: 'auto' }}></img> 
+                    <h4 class = 'streak' style={{fontSize: '20vw', marginRight: '20px', color: '#d2091c'}}>{streak} d </h4>
                 </div>
+                <h2 class ='streak'>You're on fire!</h2>
             </div>
+        </div>
     
 
     )
