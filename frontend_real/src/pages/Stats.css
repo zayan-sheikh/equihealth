@@ -41,3 +41,51 @@ p {
     margin: 7%;
     margin-top: 5%;
 }
+
+.Plug {
+    text-align: center;
+    justify-content: center;
+    animation: slidein 4s ease-in 0s;
+}
+
+@keyframes slidein {
+    0% {
+        opacity: 0;
+    }    
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.plugBody {
+    
+    /* border: 5px solid rgb(26, 26, 26); */
+    background-color:aliceblue;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    color:#0a4752;
+    padding: 2%;
+}
+
+.plugHeader {
+    background-color: rgb(26, 26, 26);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 2%;
+    color: #95FFEC;
+}
+
+.merchPic {
+    border-radius: 60px;
+    transition: 0.5s;
+    padding: 1%;
+}
+
+.merchPic:hover {
+    width: 35%;
+}
