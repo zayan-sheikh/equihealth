@@ -65,8 +65,11 @@ function Home() {
             </div>
         
             
-
-            <Spline class="Unicorn" scene="https://prod.spline.design/p4WjuLMFFEbMOag6/scene.splinecode" />
+            {streak === 0 ? <Spline class="Unicorn" scene="https://prod.spline.design/Ahy3swjRwMvfTwTK/scene.splinecode" /> : <Spline class="Unicorn" scene="https://prod.spline.design/p4WjuLMFFEbMOag6/scene.splinecode" />}
+                
+            
+            
+            
 
             
 
