@@ -1,4 +1,8 @@
 import React from 'react'
+import FakeSearchBar from '../assets/FakeSearchBar'
+import dummypfp from '../assets/dummypfp.jpeg'
+import dummypfp2 from '../assets/dummypfp2.jpeg'
+import './Leaderboard.css';
 
 export default function AddFriends() {
   return (
@@ -8,6 +12,31 @@ export default function AddFriends() {
       </div>
       <div class ='friendbox'>
         <p>Search for Friends</p>
+        <FakeSearchBar />
+      </div>
+
+      <div>
+      <p>Some people you may know...</p>
+      <div class ='leaderboard-item' style={{ display: 'flex', alignItems: 'center'}}>
+                <img src={dummypfp2} alt="Chloe's Profile Picture" style={{ width: '12vw', height: '12vw',  borderRadius: '100px'}}></img>
+          <p>Sandra </p>
+
+      </div>
+      <div class ='leaderboard-item' style={{ display: 'flex', alignItems: 'center'}}>
+                <img src={dummypfp2} alt="Chloe's Profile Picture" style={{ width: '12vw', height: '12vw',  borderRadius: '100px'}}></img>
+          <p>Tara </p>
+
+      </div>
+      <div class ='leaderboard-item' style={{ display: 'flex', alignItems: 'center'}}>
+                <img src={dummypfp2} alt="Chloe's Profile Picture" style={{ width: '12vw', height: '12vw',  borderRadius: '100px'}}></img>
+          <p>Karan</p>
+
+      </div>
+      <div class ='leaderboard-item' style={{ display: 'flex', alignItems: 'center'}}>
+                <img src={dummypfp2} alt="Chloe's Profile Picture" style={{ width: '12vw', height: '12vw',  borderRadius: '100px'}}></img>
+          <p>Tanya</p>
+
+      </div>
       </div>
     </div>
   )

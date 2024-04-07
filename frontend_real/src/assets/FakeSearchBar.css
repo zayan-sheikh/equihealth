@@ -1,0 +1,21 @@
+.search-bar {
+    display: flex;
+    border: none;
+    align-items: center;
+    border-radius: 30vw;
+    padding: 5vw;
+    margin-bottom: 10px;
+    height: 3vw;
+    width: 80vw;
+    margin-left: 3vw;
+    margin-bottom: 20vw;
+    background-color: white;
+  }
+
+input {
+    flex:1;
+    border:none;
+    outline:none;
+    background:transparent;
+    padding:10px;
+}
