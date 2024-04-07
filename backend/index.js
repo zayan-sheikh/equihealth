@@ -5,6 +5,7 @@ const express = require('express')
 const favicon = require('express-favicon');
 const mongoose = require('mongoose')
 const userRoutes = require('./routes/route1')
+const cors = require('cors');
 
 // // Tells the server to look for a build of the React app (for Heroku deployment)
 // if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging') {
@@ -21,6 +22,8 @@ const app = express()
 // the line below checks if any data is being sent to the server 
 // and if there is, it attaches that data to the "req" object! 
 app.use(express.json())
+// Use CORS middleware
+app.use(cors());
 
 // app.use(favicon('./client/public/favicon.ico'));
     
