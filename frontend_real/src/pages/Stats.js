@@ -3,17 +3,9 @@ import "./Stats.css";
 import {Link} from 'react-router-dom';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer} from 'recharts';
 
-const dummybars = [
-                {name: 'Page A', Score: 3, pv: 2400, amt: 2400},
-                {name: 'Page A', Score: 8, pv: 2400, amt: 2400},
-                {name: 'Page A', Score: 7, pv: 2400, amt: 2400},
-                {name: 'Page A', Score: 9, pv: 2400, amt: 2400},
-                {name: 'Page A', Score: 3, pv: 2400, amt: 2400}            
-            ];
-
 
 function Stats() {
-    const [user, setUser] = useState({streak: -1, water: -1, exercise: -1, food: -1, brain: -1, connect: -1})
+    const [user, setUser] = useState({streak: 0, water: 0, exercise: 0, food: 0, brain: 0, connect: 0})
 
     useEffect(() => {
         const fetchStreak = async () => {
@@ -32,6 +24,16 @@ function Stats() {
         fetchStreak()
     }, [])
 
+    
+    const dummybars = [
+    {name: 'Page A', Score: user.food},
+    {name: 'Page A', Score: user.brain},
+    {name: 'Page A', Score: user.water},
+    {name: 'Page A', Score: user.exercise},
+    {name: 'Page A', Score: user.connect}            
+    ];
+
+
     return (
         <div class="container">
 
@@ -44,6 +46,15 @@ function Stats() {
         <div class="Label">
             <h1>YOUR STATS</h1>
         </div>
+        {/* <div class="Label">
+            <p>{user.water}</p>
+            <p>{user.exercise}</p>
+            <p>{user.food}</p>
+            <p>{user.brain}</p>
+            <p>{user.connect}</p>
+        </div> */}
+
+        
 
         <div class="Graph">
             <ResponsiveContainer width="95%" height={300}>
@@ -82,18 +93,34 @@ function Stats() {
 
         <div class="Balance">
         <div class="prContain">
-                <p>Create balance with&nbsp; </p>
+                <p>Create balance with more&nbsp; </p>
                 <p class="prText">nutrition</p>
                 <p class="prText">.</p>
             </div>   
         </div>
 
         <div class="Plug">
-            Arc'teryx has the perfect product for your current priority:
+            
+            <div class="plugHeader">
+                Arc'teryx has great products to enhance your fitness!
+            </div>
+
+            <div class="plugBody">
+                <a href="https://arcteryx.com/ca/en/shop/della-flask-holder-pack-accessory">
+                <img src={require("./boawaa.png") } alt="product_preview" width="30%" height="10%" className="merchPic"/> 
+                </a>
+
+                <a href="https://arcteryx.com/ca/en/shop/mens/sylan-shoe">
+                <img src={require("./shoe.png") } alt="product_preview" width="30%" height="10%" className="merchPic"/> 
+                </a>
+
+                <a href="https://arcteryx.com/ca/en/shop/mens/norvan-shell-jacket">
+                <img src={require("./runner.png") } alt="product_preview" width="30%" height="10%" className="merchPic"/> 
+                </a>
+            </div>
         </div>
 
-        <div class="Leaderboard"></div>
-            See how your friends are doing...
+        
         </div>
         
     )
