@@ -69,11 +69,11 @@ function Stats() {
             </ResponsiveContainer>
 
             <div className="icon-container">
-                <img src={require("./heart.png")} alt="heart"/>
-                <img src={require("./brain.png")} alt="heart"/>
-                <img src={require("./heart.png")} alt="heart"/>
-                <img src={require("./heart.png")} alt="heart"/>
-                <img src={require("./heart.png")} alt="heart"/>
+                <img src={require("./food.png")} alt="icon"/>
+                <img src={require("./brain.png")} alt="icon"/>
+                <img src={require("./water.png")} alt="icon"/>
+                <img src={require("./heart.png")} alt="icon"/>
+                <img src={require("./ppl.png")} alt="icon"/>
             </div>
 
         </div>
