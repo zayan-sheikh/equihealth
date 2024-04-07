@@ -27,12 +27,12 @@ const updateUser = async (req, res) => {
     // update we want to make
     // question: can you just put req.body as the second argument?
     // note: "workout" below will be equal to the PRE-UPDATE document, NOT the new, updated document.
-    const workout = await Workout.findOneAndUpdate({_id: id}, {
+    const workout = await User.findOneAndUpdate({_id: id}, {
         // the ... in front of req.body spreads out the elements in req.body into the outer curly brackets.
         ...req.body
     })
     
-    const workout1 = await Workout.findById(id)
+    const workout1 = await User.findById(id)
 
     res.status(200).json(workout1)
 }

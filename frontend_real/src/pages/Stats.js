@@ -44,13 +44,6 @@ function Stats() {
         <div class="Label">
             <h1>YOUR STATS</h1>
         </div>
-        <div class="Label">
-            <p>{user.water}</p>
-            <p>{user.exercise}</p>
-            <p>{user.food}</p>
-            <p>{user.brain}</p>
-            <p>{user.connect}</p>
-        </div>
 
         <div class="Graph">
             <ResponsiveContainer width="95%" height={300}>

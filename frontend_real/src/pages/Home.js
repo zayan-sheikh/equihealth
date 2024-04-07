@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import "./Home.css";
 import {Link} from 'react-router-dom'
 import streakimg from '../assets/streakimg.png'
+import differenceInHours from 'date-fns/differenceInHours'
 
 function Home() {
-    const [streak, setStreak] = useState(-1)
+    const [streak, setStreak] = useState()
+    var user = {};
 
     useEffect(() => {
         const fetchStreak = async () => {
@@ -17,11 +19,35 @@ function Home() {
             const json = await response.json()
 
             if (response.ok) {
+                user = json;
                 setStreak(json.streak)
             }
         }
 
         fetchStreak()
+
+        var time = differenceInHours(new Date(), new Date(user.updatedAt));
+
+        if (time > 48) {
+            const myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+
+            const raw = JSON.stringify({
+            "streak": 0
+            });
+
+            const requestOptions = {
+            method: "PATCH",
+            headers: myHeaders,
+            body: raw,
+            redirect: "follow"
+            };
+
+            var path = "http://localhost:3001/api/main/";
+            var result = path.concat(user._id);
+
+            fetch(result, requestOptions);
+        }
     }, [])
 
     return (
@@ -31,9 +57,11 @@ function Home() {
                 <p class="greeting"> Hello, User!</p>
             </div>
         
-            <div class="header">
-                <Link to='/tasks' class="userText">View Daily Tasks</Link>
-            </div>
+            <Link to='/tasks' class="userText">
+                <div class="header">
+                    <p>View Daily Tasks</p>
+                </div>
+            </Link>
 
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
                 <div  style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
