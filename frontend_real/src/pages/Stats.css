@@ -2,6 +2,7 @@ body {
     background: linear-gradient(#95FFEC, #37A58A);
 }
 
+
 .Back {
     text-align: left;
     color: rgb(0, 0, 0);
@@ -19,6 +20,10 @@ body {
 p {
     font-size: 14pt;
     color: #0a4752
+}
+
+.Priority, .Balance {
+    margin: -10px;
 }
 
 .prText {
@@ -45,6 +50,9 @@ p {
 .Plug {
     text-align: center;
     justify-content: center;
+    max-width: 90%;
+    margin: 5vw;
+    margin-top: 2vw;
     animation: slidein 4s ease-in 0s;
 }
 

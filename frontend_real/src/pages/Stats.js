@@ -33,6 +33,44 @@ function Stats() {
     {name: 'Page A', Score: user.connect}            
     ];
 
+    var largestCat = "";
+    var smallestCat = "";
+    var catValArray = [user.food, user.water, user.exercise, user.connect, user.brain]
+    var catNameArray = ["eating healthy", "hydration", "exercise", "connection", "intellectual wellness"]
+
+    // returns the category with the most tasks completed in
+    const largest = () => {
+        var largestVal = 0;
+        var v = 0;
+
+        for (let i = 0; i < 5; i++) {
+            if (largestVal < catValArray[i]) {
+                largestVal = catValArray[i];
+                v = i;   
+            }
+        }
+
+        return catNameArray[v];
+    }
+
+    largestCat = largest();
+
+    const smallest = () => {
+        var smallest = largestCat;
+        var v = 0;
+
+        for (let i = 0; i < 5; i++) {
+            if (smallest > catValArray[i]) {
+                smallest = catValArray[i];
+                v = i;
+            }
+        }
+
+        return catNameArray[v];
+    }
+
+    smallestCat = smallest();
+
 
     return (
         <div class="container">
@@ -46,15 +84,6 @@ function Stats() {
         <div class="Label">
             <h1>YOUR STATS</h1>
         </div>
-        {/* <div class="Label">
-            <p>{user.water}</p>
-            <p>{user.exercise}</p>
-            <p>{user.food}</p>
-            <p>{user.brain}</p>
-            <p>{user.connect}</p>
-        </div> */}
-
-        
 
         <div class="Graph">
             <ResponsiveContainer width="95%" height={300}>
@@ -86,7 +115,7 @@ function Stats() {
         <div class="Priority">
             <div class="prContain">
                 <p>Lately, your priority has been&nbsp; </p>
-                <p class="prText">fitness</p>
+                <p class="prText">{largestCat}</p>
                 <p class="prText">.</p>
             </div>            
         </div>
@@ -94,7 +123,7 @@ function Stats() {
         <div class="Balance">
         <div class="prContain">
                 <p>Create balance with more&nbsp; </p>
-                <p class="prText">nutrition</p>
+                <p class="prText">{smallestCat}</p>
                 <p class="prText">.</p>
             </div>   
         </div>
