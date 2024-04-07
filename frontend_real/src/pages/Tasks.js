@@ -68,6 +68,8 @@ function Tasks() {
   // tells us whether we should increase the streak or not
   // returns a boolean. true = we should increase, false = we shouldn't increase
   const incStreak = () => {
+    if (user.streak == 0) return true;
+    
     var time = differenceInHours(new Date(), new Date(user.updatedAt));
 
     return time >= 24;

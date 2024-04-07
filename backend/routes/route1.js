@@ -19,7 +19,7 @@ const router = express.Router()
 router.post('/', createUser);
 
 // DELETE the user
-router.get('/:id', deleteUser);
+router.delete('/:id', deleteUser);
 
 // GET all statistics
 router.get('/stats', getStatistics)

@@ -3,14 +3,16 @@ const mongoose = require('mongoose')
 
 // delete a user
 const deleteUser = async (req, res) => {
-    //
+    const { id } = req.params
+
+    const user = await User.findOneAndDelete({_id: id})
 }
 
 // create a new user
 const createUser = async (req, res) => {
     // add a User document to db
     try {
-        const user = await User.create({streak: 0, water: 0, exercise: 0, food: 0, brain: 0, connect: 0})
+        const user = await User.create({streak: 0, water: 3, exercise: 16, food: 4, brain: 1, connect: 7})
         res.status(200).json(user)
     } catch (error) {
         // "error" is a property of the response JSON
