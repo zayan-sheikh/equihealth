@@ -6,6 +6,9 @@ export default function AddFriends() {
       <div class="Label">
           <h1>Add Friends</h1>
       </div>
+      <div class ='friendbox'>
+        <p>Search for Friends</p>
+      </div>
     </div>
   )
 }

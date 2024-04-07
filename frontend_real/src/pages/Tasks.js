@@ -132,7 +132,7 @@ function Tasks() {
 
       <div className="task-list">
         <Link to='/' title="task1" class="taskB" onClick={() => taskPressed(task1)}>
-          <div className="task" style={{backgroundColor: "white"}}>
+          <div className="task">
             <p>{taskArray[task1]}</p> 
           </div>
         </Link>
