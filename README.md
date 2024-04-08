@@ -8,16 +8,19 @@ This was our youCode 2024 Hackathon Project.
 <br>
 
 Our home page:
+<br>
 ![image](https://github.com/zayan-sheikh/equihealth/assets/115388743/d76276d5-58c6-4cb9-9488-ba995de7334d)
 <br>
 <br>
 
 Today's tasks:
+<br>
 ![image](https://github.com/zayan-sheikh/equihealth/assets/115388743/5ae3a364-31b4-4528-85f6-280d94e0e181)
 <br>
 <br>
 
 The user statistics:
+<br>
 ![image](https://github.com/zayan-sheikh/equihealth/assets/115388743/9bbe3d9f-e196-4978-a724-d08c805f72ad)
 <br>
 <br>
