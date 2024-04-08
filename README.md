@@ -25,9 +25,7 @@ The user statistics:
 <br>
 <br>
 ### TODO
-Implement user authentication.
+- Implement user authentication.
 <br>
 <br>
-Thanks for reading!
-
 Thanks for reading!
