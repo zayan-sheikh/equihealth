@@ -1,9 +1,9 @@
 
 import React from 'react';
-import addFriends from './addfriends.png';
-import statsIcon from './stats.png';
-import leaderboardIcon from './leaderboard.png';
-import homeIcon from './home-icon.png'
+import addFriends from '../images/addfriends.png';
+import statsIcon from '../images/stats.png';
+import leaderboardIcon from '../images/leaderboard.png';
+import homeIcon from '../images/home-icon.png'
 import './NavBar.css'
 import { Link } from 'react-router-dom'
 

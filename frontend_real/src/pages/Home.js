@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./Home.css";
 import {Link} from 'react-router-dom'
-import streakimg from '../assets/streakimg.png'
+import streakimg from '../images/streakimg.png'
 import differenceInHours from 'date-fns/differenceInHours'
 import Spline from '@splinetool/react-spline';
 

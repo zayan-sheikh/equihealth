@@ -96,11 +96,11 @@ function Stats() {
             </ResponsiveContainer>
 
             <div className="icon-container">
-                <img src={require("./food.png")} alt="icon"/>
-                <img src={require("./brain.png")} alt="icon"/>
-                <img src={require("./water.png")} alt="icon"/>
-                <img src={require("./heart.png")} alt="icon"/>
-                <img src={require("./ppl.png")} alt="icon"/>
+                <img src={require("../images/food.png")} alt="icon"/>
+                <img src={require("../images/brain.png")} alt="icon"/>
+                <img src={require("../images/water.png")} alt="icon"/>
+                <img src={require("../images/heart.png")} alt="icon"/>
+                <img src={require("../images/ppl.png")} alt="icon"/>
             </div>
 
         </div>
@@ -127,15 +127,15 @@ function Stats() {
 
             <div class="plugBody">
                 <a href="https://arcteryx.com/ca/en/shop/della-flask-holder-pack-accessory">
-                <img src={require("./boawaa.png") } alt="product_preview" width="30%" height="10%" className="merchPic"/> 
+                <img src={require("../images/boawaa.png") } alt="product_preview" width="30%" height="10%" className="merchPic"/> 
                 </a>
 
                 <a href="https://arcteryx.com/ca/en/shop/mens/sylan-shoe">
-                <img src={require("./shoe.png") } alt="product_preview" width="30%" height="10%" className="merchPic"/> 
+                <img src={require("../images/shoe.png") } alt="product_preview" width="30%" height="10%" className="merchPic"/> 
                 </a>
 
                 <a href="https://arcteryx.com/ca/en/shop/mens/norvan-shell-jacket">
-                <img src={require("./runner.png") } alt="product_preview" width="30%" height="10%" className="merchPic"/> 
+                <img src={require("../images/runner.png") } alt="product_preview" width="30%" height="10%" className="merchPic"/> 
                 </a>
             </div>
         </div>

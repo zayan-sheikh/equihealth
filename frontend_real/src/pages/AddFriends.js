@@ -1,7 +1,7 @@
 import React from 'react'
-import FakeSearchBar from '../assets/FakeSearchBar'
-import dummypfp from '../assets/dummypfp.jpeg'
-import dummypfp2 from '../assets/dummypfp2.jpeg'
+import FakeSearchBar from '../components/FakeSearchBar'
+import dummypfp from '../images/dummypfp.jpeg'
+import dummypfp2 from '../images/dummypfp2.jpeg'
 import './Leaderboard.css';
 
 export default function AddFriends() {
