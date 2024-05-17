@@ -1,5 +1,5 @@
 # equiHealth
-equiHealth is a fUll-stack MERN application, supported by Spline for the 3D unicorn. It's similar to Duolingo in the sense that the user tries to maintain a daily streak, except instead of language-learning, they must carry out a wellness task. Such tasks include drinking enough water, journaling, or taking a walk. The app documents which category of tasks the user most frequently chooses, then recommends Arc'teryx products for the user based on the user's favourite category.
+equiHealth is a full-stack MERN application, supported by Spline for the 3D unicorn. It's similar to Duolingo in the sense that the user tries to maintain a daily streak, except instead of language-learning, they must carry out a wellness task. Such tasks include drinking enough water, journaling, or taking a walk. The app documents which category of tasks the user most frequently chooses, then recommends Arc'teryx products for the user based on the user's favourite category.
 <br>
 <br>
 
