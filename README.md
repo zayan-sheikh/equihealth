@@ -26,6 +26,7 @@ The user statistics:
 <br>
 ### TODO
 - Implement user authentication.
+- Implement a simple recommender system that recommends products to users based on their most frequent activities.
 <br>
 <br>
 Thanks for reading!
